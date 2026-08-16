@@ -15,7 +15,7 @@ jobs:
     name: Build and test
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Toolchain
         run: |
@@ -37,7 +37,7 @@ jobs:
     name: Package the app
     runs-on: macos-15
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Proves the thing users actually install still assembles and passes its
       # own signature check. A release that fails here fails at the tag instead,
@@ -57,7 +57,7 @@ jobs:
           lipo -archs "$APP/Contents/MacOS/Wildcard" | grep -q x86_64
           "$APP/Contents/Helpers/wildcard" version
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: Wildcard.app
           path: /tmp/wildcard-build/dist/*.zip
@@ -67,6 +67,6 @@ jobs:
     name: Shell scripts
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: shellcheck
         run: shellcheck build.sh install.sh

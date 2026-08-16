@@ -50,26 +50,46 @@ if [ -z "$VERSION" ]; then
 fi
 BUILD_NUMBER="${WILDCARD_BUILD_NUMBER:-$(date +%Y%m%d%H%M)}"
 
-ARCHFLAGS=()
-ARCHLABEL="$(uname -m)"
-if [ "$UNIVERSAL" -eq 1 ]; then
-  ARCHFLAGS=(--arch arm64 --arch x86_64)
-  ARCHLABEL="universal"
-fi
+# Must match the platform in Package.swift and LSMinimumSystemVersion below.
+MACOS_MIN=14.0
 
 APP="$BUILD/Wildcard.app"
+SCRATCH="$BUILD/.build"
+ARCHLABEL="$(uname -m)"
+[ "$UNIVERSAL" -eq 1 ] && ARCHLABEL="universal"
 
 echo "==> Wildcard $VERSION ($CONFIG, $ARCHLABEL)"
-swift build --package-path "$SRC" --scratch-path "$BUILD/.build" \
-  -c "$CONFIG" "${ARCHFLAGS[@]}" --product WildcardApp
-swift build --package-path "$SRC" --scratch-path "$BUILD/.build" \
-  -c "$CONFIG" "${ARCHFLAGS[@]}" --product wildcard
 
-# A universal build lands in an "apple/" subdirectory; a native one does not.
-BIN="$BUILD/.build/$CONFIG"
-[ "$UNIVERSAL" -eq 1 ] && BIN="$BUILD/.build/apple/Products/$(tr '[:lower:]' '[:upper:]' <<<"${CONFIG:0:1}")${CONFIG:1}"
-if [ ! -x "$BIN/WildcardApp" ]; then
-  echo "built product not found at $BIN/WildcardApp" >&2
+build_for() {   # build_for <triple-or-empty>
+  local args=(--package-path "$SRC" --scratch-path "$SCRATCH" -c "$CONFIG")
+  [ -n "$1" ] && args+=(--triple "$1")
+  swift build "${args[@]}"
+}
+
+if [ "$UNIVERSAL" -eq 1 ]; then
+  # Two ordinary builds joined with lipo, rather than `swift build --arch a
+  # --arch b`. That flag hands the job to Xcode's build system, which on Xcode
+  # 16 collapses into "duplicate output file" and "SWIFT_VERSION '' is
+  # unsupported" for a package with several products. `--triple` stays on
+  # SwiftPM's own build system, which behaves the same everywhere.
+  build_for "arm64-apple-macosx$MACOS_MIN"
+  build_for "x86_64-apple-macosx$MACOS_MIN"
+
+  BIN="$SCRATCH/universal-$CONFIG"
+  rm -rf "$BIN"
+  mkdir -p "$BIN"
+  for product in WildcardApp wildcard; do
+    lipo -create -output "$BIN/$product" \
+      "$SCRATCH/arm64-apple-macosx/$CONFIG/$product" \
+      "$SCRATCH/x86_64-apple-macosx/$CONFIG/$product"
+  done
+else
+  build_for ""
+  BIN="$SCRATCH/$CONFIG"
+fi
+
+if [ ! -x "$BIN/WildcardApp" ] || [ ! -x "$BIN/wildcard" ]; then
+  echo "built products not found in $BIN" >&2
   exit 1
 fi
 
@@ -96,7 +116,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
     <key>CFBundleShortVersionString</key>   <string>$VERSION</string>
     <key>CFBundleVersion</key>              <string>$BUILD_NUMBER</string>
     <key>CFBundleInfoDictionaryVersion</key><string>6.0</string>
-    <key>LSMinimumSystemVersion</key>       <string>14.0</string>
+    <key>LSMinimumSystemVersion</key>       <string>$MACOS_MIN</string>
     <key>LSApplicationCategoryType</key>    <string>public.app-category.utilities</string>
     <key>NSHighResolutionCapable</key>      <true/>
     <key>NSHumanReadableCopyright</key>     <string>MIT licensed. https://github.com/maksim-shabunov/wildcard</string>
