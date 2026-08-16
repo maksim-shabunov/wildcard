@@ -110,11 +110,14 @@ Wildcard is an MCP server. **Settings → Integrations** installs it into Claude
 Code, Claude Desktop or Codex, or gives you the config block to paste anywhere
 else.
 
-Agent access is **off by default**. When it is on, an agent gets eighteen tools:
-seventeen that read, and `propose_changes`, which queues a proposal and returns.
-An agent cannot approve its own proposal — the switch that would allow that does
-not exist, and the check lives in the binary rather than only in the MCP layer,
-because an agent with a shell can run the binary directly.
+Agent access is **off by default**. When it is on, an agent gets seventeen
+tools. Eleven only read. Three edit Wildcard's own rules, which changes no file
+associations by itself. The remaining three — `propose_changes`, `rollback`,
+`restore_snapshot` — queue a proposal and return.
+
+An agent cannot approve its own proposal. There is no switch for it, and the
+check lives in the binary rather than only in the MCP layer, because an agent
+with a shell can run the binary directly.
 
 ```
 › move my code files to Zed but leave markdown in Obsidian

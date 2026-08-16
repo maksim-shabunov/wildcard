@@ -19,8 +19,9 @@ First public release.
 - History with per-change undo, and automatic snapshots before every apply.
 - "Needs a decision" inbox, so a newly appeared file type is never handed to
   whichever application claimed it first.
-- `wildcard` command-line tool with fifteen commands.
-- MCP server with eighteen tools, off by default, with one-click installation
+- `wildcard` command-line tool, where writes queue a proposal and block until it
+  is approved.
+- MCP server with seventeen tools, off by default, with one-click installation
   into Claude Code, Claude Desktop and Codex.
 - Universal build for Apple Silicon and Intel, a checksum-verifying install
   script, and a Homebrew cask.

@@ -131,7 +131,7 @@ jobs:
             desc "Set default applications by category, with every change reviewed first"
             homepage "https://github.com/${{ github.repository }}"
 
-            depends_on macos: ">= :sonoma"
+            depends_on macos: :sonoma
 
             app "Wildcard.app"
 
