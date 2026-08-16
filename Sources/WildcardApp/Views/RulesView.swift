@@ -80,17 +80,12 @@ struct RulesView: View {
                     }
                     Spacer()
                     AppLabel(ref: AppRef(id: rule.appID, name: rule.appName))
-                    Menu {
+                    OverflowMenu(label: "More for the rule “\(rule.name.isEmpty ? "Untitled rule" : rule.name)”") {
                         Button("Edit") { editing = rule }
                         Button("Apply now") { applyNow(rule) }
                         Divider()
                         Button("Delete", role: .destructive) { model.deleteRule(rule) }
-                    } label: {
-                        Image(systemName: "ellipsis.circle").font(.system(size: 13))
                     }
-                    .menuStyle(.borderlessButton)
-                    .frame(width: 24)
-                    .accessibilityLabel("More for the rule “\(rule.name.isEmpty ? "Untitled rule" : rule.name)”")
                 }
 
                 if !drifted.isEmpty {

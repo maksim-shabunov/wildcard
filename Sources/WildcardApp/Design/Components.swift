@@ -320,6 +320,45 @@ struct AppPicker: View {
     }
 }
 
+/// The ⋯ button that holds a row's less-common actions.
+///
+/// `Menu` draws a disclosure chevron of its own next to whatever label it is
+/// given. At full width that reads as one control; narrowed to the width of an
+/// icon it lands on top of the glyph, and the row ends up with two overlapping
+/// marks where one was meant. `menuIndicator(.hidden)` is the supported way to
+/// say the label *is* the whole control, and the button menu style is the one
+/// that honours it — `.borderlessButton` draws the chevron as part of its own
+/// chrome and ignores the request.
+struct OverflowMenu<Content: View>: View {
+    let label: String
+    @ViewBuilder var content: Content
+
+    @State private var hovering = false
+
+    var body: some View {
+        Menu {
+            content
+        } label: {
+            Image(systemName: "ellipsis.circle")
+                .font(.system(size: 13))
+                // The glyph is its own shape, so hover is a tonal step on the
+                // mark rather than a panel behind it — a round icon inside a
+                // rounded rectangle is two corner radii that cannot agree.
+                .foregroundStyle(hovering ? Theme.textPrimary : Theme.textSecondary)
+        }
+        .menuStyle(.button)
+        .buttonStyle(.plain)
+        .menuIndicator(.hidden)
+        // Sized, not clipped. The fixed 24pt this replaces was an attempt to
+        // crop the chevron off, which at this font size simply put it on top of
+        // the glyph instead.
+        .frame(width: 28, height: 24)
+        .contentShape(Rectangle())
+        .onHover { hovering = $0 }
+        .accessibilityLabel(label)
+    }
+}
+
 /// Rows highlight on hover with a tonal step, not a border.
 struct HoverRowStyle: ButtonStyle {
     @State private var hovering = false

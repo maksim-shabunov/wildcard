@@ -110,18 +110,13 @@ struct DecisionsView: View {
                 .buttonStyle(PrimaryButtonStyle())
             }
 
-            Menu {
+            OverflowMenu(label: "More for \(model.catalog.label(for: decision.target))") {
                 ForEach(candidates(for: decision.target), id: \.id) { app in
                     Button(app.name) { assign([decision.target], to: app) }
                 }
                 Divider()
                 Button("Ignore this type") { model.dismiss(decisions: [decision.target]) }
-            } label: {
-                Image(systemName: "ellipsis.circle").font(.system(size: 13))
             }
-            .menuStyle(.borderlessButton)
-            .frame(width: 24)
-            .accessibilityLabel("More for \(model.catalog.label(for: decision.target))")
         }
         .padding(.horizontal, Theme.Space.m)
         .padding(.vertical, 9)
