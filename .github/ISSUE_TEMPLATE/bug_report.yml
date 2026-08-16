@@ -1,0 +1,50 @@
+name: Bug report
+description: Something in Wildcard does not work
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "15.2 — from  → About This Mac"
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Wildcard version
+      description: Settings shows it, or run `wildcard version`.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: How it was installed
+      options:
+        - install.sh
+        - Homebrew
+        - Downloaded the zip
+        - Built from source
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: >
+        If a change did not take effect, the output of
+        `wildcard list --types <the type>` is usually the fastest way to see why.
+        Wildcard's own state is plain JSON in
+        `~/Library/Application Support/Wildcard/`.

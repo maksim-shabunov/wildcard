@@ -1,0 +1,22 @@
+# SwiftPM
+.build/
+.swiftpm/
+Package.resolved
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+*.xcuserstate
+
+# Build output — build.sh works outside the tree, but not everyone will
+dist/
+*.app/
+*.dSYM/
+
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+Icon?

@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: Build and test
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Toolchain
+        run: |
+          swift --version
+          xcodebuild -version
+          sw_vers
+
+      - name: Build
+        run: swift build --build-tests
+
+      # The apply-pipeline tests write to the real LaunchServices database and
+      # stay switched off here. Everything else — the catalog invariants, the
+      # cross-process store, the proposal queue, rollback identity — is pure
+      # enough to mean something on a runner.
+      - name: Test
+        run: swift test
+
+  package:
+    name: Package the app
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      # Proves the thing users actually install still assembles and passes its
+      # own signature check. A release that fails here fails at the tag instead,
+      # which is far too late.
+      - name: Build and sign Wildcard.app
+        run: ./build.sh --universal --zip --no-install
+
+      - name: Verify the bundle
+        run: |
+          APP=/tmp/wildcard-build/Wildcard.app
+          codesign --verify --strict --verbose=2 "$APP"
+          test -x "$APP/Contents/MacOS/Wildcard"
+          test -x "$APP/Contents/Helpers/wildcard"
+          test -f "$APP/Contents/Resources/catalog.json"
+          lipo -archs "$APP/Contents/MacOS/Wildcard"
+          lipo -archs "$APP/Contents/MacOS/Wildcard" | grep -q arm64
+          lipo -archs "$APP/Contents/MacOS/Wildcard" | grep -q x86_64
+          "$APP/Contents/Helpers/wildcard" version
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Wildcard.app
+          path: /tmp/wildcard-build/dist/*.zip
+          retention-days: 7
+
+  scripts:
+    name: Shell scripts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: shellcheck build.sh install.sh

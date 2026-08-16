@@ -1,0 +1,156 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag to release, e.g. v1.0.0"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and publish
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Work out the version
+        id: version
+        run: |
+          TAG="${{ github.event.inputs.tag || github.ref_name }}"
+          VERSION="${TAG#v}"
+          DECLARED=$(sed -n 's/.*static let current = "\([^"]*\)".*/\1/p' \
+            Sources/WildcardKit/Version.swift)
+          # A tag that disagrees with the source ships an app whose About box
+          # lies about which build it is. Stop here rather than find out later.
+          if [ "$VERSION" != "$DECLARED" ]; then
+            echo "::error::tag $TAG says $VERSION, Sources/WildcardKit/Version.swift says $DECLARED"
+            exit 1
+          fi
+          echo "tag=$TAG"          >> "$GITHUB_OUTPUT"
+          echo "version=$VERSION"  >> "$GITHUB_OUTPUT"
+
+      - name: Test
+        run: swift test
+
+      - name: Build
+        env:
+          WILDCARD_BUILD_NUMBER: ${{ github.run_number }}
+        run: ./build.sh --universal --zip --no-install
+
+      - name: Verify the bundle
+        run: |
+          APP=/tmp/wildcard-build/Wildcard.app
+          codesign --verify --strict "$APP"
+          lipo -archs "$APP/Contents/MacOS/Wildcard" | grep -q arm64
+          lipo -archs "$APP/Contents/MacOS/Wildcard" | grep -q x86_64
+          test "$("$APP/Contents/Helpers/wildcard" version)" = "wildcard ${{ steps.version.outputs.version }}"
+
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+          V: ${{ steps.version.outputs.version }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          cd /tmp/wildcard-build/dist
+          SHA=$(cut -d' ' -f1 < "Wildcard-$V-macos-universal.zip.sha256")
+          cat > notes.md <<EOF
+          ## Install
+
+          \`\`\`sh
+          curl -fsSL https://raw.githubusercontent.com/${{ github.repository }}/main/install.sh | bash
+          \`\`\`
+
+          or with Homebrew:
+
+          \`\`\`sh
+          brew install --cask maksim-shabunov/tap/wildcard
+          \`\`\`
+
+          Requires macOS 14 or later. Universal — Apple Silicon and Intel.
+
+          SHA-256 \`$SHA\`
+
+          ---
+          EOF
+          gh release create "$TAG" \
+            --title "Wildcard $V" \
+            --notes-file notes.md \
+            --generate-notes \
+            "Wildcard-$V-macos-universal.zip" \
+            "Wildcard-$V-macos-universal.zip.sha256"
+
+  homebrew:
+    name: Update the Homebrew tap
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      # Casks live in a repo of their own, because that is what `brew install
+      # --cask user/tap/name` looks for. Pushing there needs a token this
+      # repository's own GITHUB_TOKEN cannot provide, so the step is optional:
+      # without TAP_TOKEN the release still ships and only the cask lags.
+      - name: Check for a token
+        id: check
+        run: |
+          if [ -n "${{ secrets.TAP_TOKEN }}" ]; then
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::TAP_TOKEN is not set — skipping the Homebrew cask update."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Bump the cask
+        if: steps.check.outputs.ok == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.TAP_TOKEN }}
+          TAG: ${{ github.event.inputs.tag || github.ref_name }}
+        run: |
+          V="${TAG#v}"
+          URL="https://github.com/${{ github.repository }}/releases/download/$TAG/Wildcard-$V-macos-universal.zip"
+          SHA=$(curl -fsSL "$URL.sha256" | cut -d' ' -f1)
+
+          git clone "https://x-access-token:$GH_TOKEN@github.com/${{ github.repository_owner }}/homebrew-tap.git" tap
+          cd tap
+          mkdir -p Casks
+          cat > Casks/wildcard.rb <<EOF
+          cask "wildcard" do
+            version "$V"
+            sha256 "$SHA"
+
+            url "https://github.com/${{ github.repository }}/releases/download/v#{version}/Wildcard-#{version}-macos-universal.zip"
+            name "Wildcard"
+            desc "Set default applications by category, with every change reviewed first"
+            homepage "https://github.com/${{ github.repository }}"
+
+            depends_on macos: ">= :sonoma"
+
+            app "Wildcard.app"
+
+            # Wildcard is signed ad-hoc: it has no paid Apple Developer account
+            # and so cannot be notarised. Homebrew quarantines what it downloads,
+            # and a quarantined ad-hoc bundle is refused outright rather than
+            # merely warned about, so the flag is cleared on the way in. The
+            # checksum above is what actually vouches for this download.
+            postflight do
+              system_command "/usr/bin/xattr",
+                             args: ["-dr", "com.apple.quarantine", "#{appdir}/Wildcard.app"],
+                             sudo: false
+            end
+
+            uninstall quit: "com.wildcard.Wildcard"
+
+            zap trash: [
+              "~/Library/Application Support/Wildcard",
+            ]
+          end
+          EOF
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Casks/wildcard.rb
+          git diff --staged --quiet || git commit -m "wildcard $V"
+          git push

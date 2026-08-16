@@ -1,0 +1,1749 @@
+{
+  "categories": [
+    {
+      "icon": "chevron.left.forwardslash.chevron.right",
+      "id": "code",
+      "kind": "file",
+      "name": "Code",
+      "subgroups": [
+        {
+          "id": "code.web",
+          "name": "Web and JavaScript",
+          "types": {
+            "as": "ActionScript source",
+            "ascx": "ASP.NET control",
+            "asp": "Classic ASP page",
+            "aspx": "ASP.NET page",
+            "astro": "Astro component",
+            "cjs": "CommonJS module",
+            "css": "Stylesheet",
+            "ctp": "CakePHP template",
+            "cts": "TypeScript CommonJS",
+            "ejs": "Embedded JavaScript template",
+            "erb": "Ruby template",
+            "haml": "Haml template",
+            "handlebars": "Handlebars template",
+            "hbs": "Handlebars template",
+            "htm": "HTML page",
+            "html": "HTML page",
+            "jade": "Jade template",
+            "jhtml": "Java HTML page",
+            "jinja": "Jinja template",
+            "jinja2": "Jinja template",
+            "js": "JavaScript",
+            "jshtm": "JavaScript HTML template",
+            "jsx": "React JSX",
+            "less": "Less stylesheet",
+            "liquid": "Liquid template",
+            "mjs": "JavaScript module",
+            "mts": "TypeScript module",
+            "mustache": "Mustache template",
+            "njk": "Nunjucks template",
+            "pcss": "PostCSS stylesheet",
+            "php": "PHP source",
+            "phtml": "PHP template",
+            "pug": "Pug template",
+            "sass": "Sass stylesheet",
+            "scss": "Sass stylesheet",
+            "shtml": "Server-parsed HTML",
+            "slim": "Slim template",
+            "styl": "Stylus stylesheet",
+            "svelte": "Svelte component",
+            "tpl": "Template file",
+            "ts": "TypeScript",
+            "tsx": "React TSX",
+            "twig": "Twig template",
+            "vue": "Vue component",
+            "wasm": "WebAssembly binary",
+            "wat": "WebAssembly text",
+            "webmanifest": "Web app manifest",
+            "xhtml": "XHTML page"
+          }
+        },
+        {
+          "id": "code.systems",
+          "name": "Systems languages",
+          "types": {
+            "ada": "Ada source",
+            "adb": "Ada body",
+            "ads": "Ada specification",
+            "asm": "Assembly",
+            "bc": "LLVM bitcode",
+            "c": "C source",
+            "c++": "C++ source",
+            "cbl": "COBOL source",
+            "cc": "C++ source",
+            "cob": "COBOL source",
+            "cpp": "C++ source",
+            "cr": "Crystal source",
+            "cxx": "C++ source",
+            "d": "D source",
+            "dpr": "Delphi project",
+            "f": "Fortran source",
+            "f90": "Fortran source",
+            "f95": "Fortran source",
+            "for": "Fortran source",
+            "go": "Go source",
+            "h": "C header",
+            "h++": "C++ header",
+            "ha": "Hare source",
+            "hh": "C++ header",
+            "hpp": "C++ header",
+            "hxx": "C++ header",
+            "inl": "C++ inline",
+            "ipp": "C++ inline",
+            "jai": "Jai source",
+            "ll": "LLVM intermediate code",
+            "nasm": "NASM assembly",
+            "nim": "Nim source",
+            "nimble": "Nimble package",
+            "nims": "Nim script",
+            "odin": "Odin source",
+            "pas": "Pascal source",
+            "pp": "Pascal source",
+            "rs": "Rust source",
+            "s": "Assembly",
+            "tpp": "C++ template",
+            "zig": "Zig source"
+          }
+        },
+        {
+          "id": "code.jvm",
+          "name": "JVM languages",
+          "types": {
+            "aj": "AspectJ source",
+            "class": "Java class file",
+            "clj": "Clojure source",
+            "cljc": "Clojure common",
+            "cljs": "ClojureScript",
+            "edn": "EDN data",
+            "gradle": "Gradle build script",
+            "groovy": "Groovy source",
+            "gvy": "Groovy source",
+            "jav": "Java source",
+            "java": "Java source",
+            "jsh": "Java shell script",
+            "jsp": "Java server page",
+            "kt": "Kotlin source",
+            "kts": "Kotlin script",
+            "sc": "Scala script",
+            "scala": "Scala source"
+          }
+        },
+        {
+          "id": "code.scripting",
+          "name": "Scripting and functional languages",
+          "types": {
+            "agda": "Agda source",
+            "beam": "Erlang bytecode",
+            "cljx": "Clojure cross source",
+            "clojure": "Clojure source",
+            "coffee": "CoffeeScript source",
+            "coq": "Coq source",
+            "dart": "Dart source",
+            "eex": "Elixir template",
+            "el": "Emacs Lisp",
+            "elm": "Elm source",
+            "erl": "Erlang source",
+            "ex": "Elixir source",
+            "exs": "Elixir script",
+            "fs": "F# source",
+            "fsi": "F# interface",
+            "fsscript": "F# script",
+            "fsx": "F# script",
+            "gemspec": "Ruby gem spec",
+            "gleam": "Gleam source",
+            "heex": "Elixir HTML template",
+            "hrl": "Erlang header",
+            "hs": "Haskell source",
+            "hx": "Haxe source",
+            "idr": "Idris source",
+            "jl": "Julia source",
+            "lean": "Lean source",
+            "lhs": "Literate Haskell",
+            "lisp": "Lisp source",
+            "lsp": "Lisp source",
+            "lua": "Lua source",
+            "ml": "OCaml source",
+            "mli": "OCaml interface",
+            "moon": "MoonScript source",
+            "move": "Move source",
+            "nu": "Nushell script",
+            "pl": "Perl source",
+            "pl6": "Perl 6 source",
+            "pm": "Perl module",
+            "pm6": "Perl 6 module",
+            "psgi": "Perl web application",
+            "purs": "PureScript source",
+            "py": "Python source",
+            "pyi": "Python stub",
+            "pyw": "Python script",
+            "pyx": "Cython source",
+            "r": "R source",
+            "rake": "Rake task",
+            "raku": "Raku source",
+            "rb": "Ruby source",
+            "rkt": "Racket source",
+            "roc": "Roc source",
+            "ru": "Rack configuration",
+            "scm": "Scheme source",
+            "sol": "Solidity source",
+            "ss": "Scheme source",
+            "t": "Perl test",
+            "tcl": "Tcl source",
+            "vim": "Vim script"
+          }
+        },
+        {
+          "id": "code.shell",
+          "name": "Shell and terminal",
+          "types": {
+            "awk": "AWK script",
+            "bash": "Bash script",
+            "bat": "Batch file",
+            "cmd": "Command script",
+            "command": "Terminal command script",
+            "csh": "C shell script",
+            "expect": "Expect script",
+            "fish": "Fish script",
+            "ksh": "Korn shell script",
+            "ps1": "PowerShell script",
+            "psd1": "PowerShell manifest",
+            "psm1": "PowerShell module",
+            "sed": "sed script",
+            "sh": "Shell script",
+            "tcsh": "tcsh script",
+            "term": "Terminal settings",
+            "zsh": "Zsh script"
+          }
+        },
+        {
+          "id": "code.apple",
+          "name": "Apple platforms",
+          "types": {
+            "applescript": "AppleScript",
+            "entitlements": "Entitlements file",
+            "intentdefinition": "App intent definition",
+            "m": "Objective-C source",
+            "metal": "Metal shader",
+            "mm": "Objective-C++ source",
+            "modulemap": "Module map",
+            "pbxproj": "Xcode project file",
+            "playground": "Swift playground",
+            "scpt": "AppleScript",
+            "scptd": "AppleScript bundle",
+            "storyboard": "Interface storyboard",
+            "strings": "Localised strings",
+            "stringsdict": "Localised plurals",
+            "swift": "Swift source",
+            "xcconfig": "Xcode build settings",
+            "xcfilelist": "Xcode file list",
+            "xcodeproj": "Xcode project",
+            "xcstrings": "Xcode string catalogue",
+            "xcworkspace": "Xcode workspace",
+            "xib": "Interface file"
+          }
+        },
+        {
+          "id": "code.dotnet",
+          "name": "Microsoft and .NET",
+          "types": {
+            "bas": "Visual Basic module",
+            "cs": "C# source",
+            "cshtml": "Razor page",
+            "csproj": "C# project",
+            "csx": "C# script",
+            "fsproj": "F# project",
+            "nuspec": "NuGet spec",
+            "razor": "Razor component",
+            "resx": "Resource file",
+            "sln": "Visual Studio solution",
+            "vb": "Visual Basic source",
+            "vbhtml": "Razor page",
+            "vbproj": "Visual Basic project",
+            "xaml": "XAML interface"
+          }
+        },
+        {
+          "id": "code.datascience",
+          "name": "Notebooks and analysis",
+          "types": {
+            "do": "Stata do-file",
+            "gms": "GAMS model",
+            "gnuplot": "Gnuplot script",
+            "ipynb": "Jupyter notebook",
+            "mat": "MATLAB data",
+            "mlx": "MATLAB live script",
+            "nb": "Mathematica notebook",
+            "qmd": "Quarto document",
+            "rmd": "R Markdown",
+            "rnw": "Sweave document",
+            "sas": "SAS program",
+            "sce": "Scilab script",
+            "sps": "SPSS syntax",
+            "wl": "Wolfram language",
+            "wls": "Wolfram script"
+          }
+        },
+        {
+          "id": "code.config",
+          "name": "Data and configuration",
+          "types": {
+            "avsc": "Avro schema",
+            "bowerrc": "Bower settings",
+            "capnp": "Cap'n Proto schema",
+            "cfg": "Configuration file",
+            "code-workspace": "Editor workspace",
+            "conf": "Configuration file",
+            "config": "Configuration file",
+            "cue": "CUE configuration",
+            "dtd": "Document type definition",
+            "editorconfig": "EditorConfig settings",
+            "env": "Environment file",
+            "gql": "GraphQL query",
+            "graphql": "GraphQL schema",
+            "har": "HTTP archive",
+            "hcl": "HCL configuration",
+            "ini": "INI configuration",
+            "jscsrc": "JSCS settings",
+            "jshintrc": "JSHint settings",
+            "json": "JSON data",
+            "json5": "JSON5 data",
+            "jsonc": "JSON with comments",
+            "jsonl": "JSON Lines",
+            "jsonnet": "Jsonnet configuration",
+            "libsonnet": "Jsonnet library",
+            "ndjson": "Newline-delimited JSON",
+            "nix": "Nix expression",
+            "plist": "Property list",
+            "properties": "Java properties",
+            "proto": "Protocol buffer",
+            "rng": "RELAX NG schema",
+            "ron": "Rusty object notation",
+            "sarif": "Static analysis results",
+            "tf": "Terraform configuration",
+            "tfstate": "Terraform state",
+            "tfvars": "Terraform variables",
+            "thrift": "Thrift definition",
+            "toml": "TOML configuration",
+            "xml": "XML document",
+            "xsd": "XML schema",
+            "xsl": "XSL stylesheet",
+            "xslt": "XSL transform",
+            "yaml": "YAML document",
+            "yml": "YAML document"
+          }
+        },
+        {
+          "id": "code.build",
+          "name": "Build and packaging",
+          "types": {
+            "ac": "Autoconf file",
+            "am": "Automake file",
+            "bp": "Blueprint build file",
+            "bzl": "Starlark file",
+            "cabal": "Cabal package",
+            "cmake": "CMake script",
+            "containerfile": "Container file",
+            "dockerfile": "Dockerfile",
+            "ebuild": "Gentoo ebuild",
+            "gn": "GN build file",
+            "gyp": "GYP build file",
+            "gypi": "GYP include",
+            "lock": "Dependency lock file",
+            "m4": "M4 macro file",
+            "mak": "Make file",
+            "mk": "Make include",
+            "ninja": "Ninja build file",
+            "opam": "OPAM package",
+            "pkgbuild": "Arch package build",
+            "podspec": "CocoaPods spec",
+            "pri": "qmake include",
+            "pro": "qmake project",
+            "rockspec": "LuaRocks spec",
+            "spec": "RPM spec file",
+            "wxi": "WiX include",
+            "wxl": "WiX translations",
+            "wxs": "WiX installer source"
+          }
+        },
+        {
+          "id": "code.hardware",
+          "name": "Hardware and shaders",
+          "types": {
+            "brd": "Circuit board",
+            "cginc": "CG include",
+            "cl": "OpenCL kernel",
+            "comp": "Compute shader",
+            "cu": "CUDA source",
+            "cuh": "CUDA header",
+            "frag": "Fragment shader",
+            "gbr": "Gerber file",
+            "geom": "Geometry shader",
+            "glsl": "GLSL shader",
+            "hex": "Firmware image",
+            "hlsl": "HLSL shader",
+            "ino": "Arduino sketch",
+            "kicad_pcb": "KiCad board",
+            "pde": "Processing sketch",
+            "sch": "Circuit schematic",
+            "shader": "Shader file",
+            "sv": "SystemVerilog source",
+            "svh": "SystemVerilog header",
+            "tesc": "Tessellation shader",
+            "ucf": "Constraints file",
+            "v": "Verilog source",
+            "vert": "Vertex shader",
+            "vhdl": "VHDL source",
+            "xdc": "Design constraints"
+          }
+        },
+        {
+          "id": "code.db",
+          "name": "Database and query",
+          "types": {
+            "cql": "Cassandra query",
+            "cypher": "Cypher query",
+            "dbml": "Database markup",
+            "hql": "Hive query",
+            "mysql": "MySQL script",
+            "pgsql": "PostgreSQL script",
+            "prisma": "Prisma schema",
+            "psql": "PostgreSQL script",
+            "sparql": "SPARQL query",
+            "sql": "SQL script",
+            "surql": "SurrealQL script"
+          }
+        },
+        {
+          "id": "code.patch",
+          "name": "Patches and diffs",
+          "types": {
+            "diff": "Diff file",
+            "orig": "Original file",
+            "patch": "Patch file",
+            "rej": "Rejected patch"
+          }
+        }
+      ],
+      "summary": "Source files, configuration and build scripts — everything you would open in an editor."
+    },
+    {
+      "icon": "text.alignleft",
+      "id": "markdown",
+      "kind": "file",
+      "name": "Markdown and prose markup",
+      "subgroups": [
+        {
+          "id": "markdown.md",
+          "name": "Markdown",
+          "types": {
+            "markdown": "Markdown document",
+            "md": "Markdown document",
+            "mdown": "Markdown document",
+            "mdtext": "Markdown document",
+            "mdwn": "Markdown document",
+            "mdx": "MDX document",
+            "mkd": "Markdown document",
+            "mkdn": "Markdown document",
+            "rmarkdown": "R Markdown document"
+          }
+        },
+        {
+          "id": "markdown.other",
+          "name": "Other prose markup",
+          "types": {
+            "adoc": "AsciiDoc document",
+            "asciidoc": "AsciiDoc document",
+            "creole": "Creole markup",
+            "norg": "Neorg document",
+            "org": "Org-mode document",
+            "pod": "Perl documentation",
+            "rst": "reStructuredText",
+            "textile": "Textile document",
+            "tid": "TiddlyWiki entry",
+            "wiki": "Wiki markup"
+          }
+        }
+      ],
+      "summary": "Markdown and its dialects, kept separate so notes can go somewhere other than your editor."
+    },
+    {
+      "icon": "doc.plaintext",
+      "id": "text",
+      "kind": "file",
+      "name": "Plain text",
+      "subgroups": [
+        {
+          "id": "text.plain",
+          "name": "Plain text",
+          "types": {
+            "nfo": "Info file",
+            "text": "Plain text",
+            "txt": "Plain text",
+            "utf8": "Plain text"
+          }
+        },
+        {
+          "id": "text.tabular",
+          "name": "Tabular text",
+          "types": {
+            "csv": "Comma-separated values",
+            "dsv": "Delimited values",
+            "psv": "Pipe-separated values",
+            "tsv": "Tab-separated values"
+          }
+        }
+      ],
+      "summary": "Unformatted text and simple tabular data of no particular language."
+    },
+    {
+      "icon": "list.bullet.rectangle",
+      "id": "logs",
+      "kind": "file",
+      "name": "Logs and diagnostics",
+      "subgroups": [
+        {
+          "id": "logs.all",
+          "name": "Logs and reports",
+          "types": {
+            "cast": "Terminal recording",
+            "crash": "Crash report",
+            "diag": "Diagnostic report",
+            "dmp": "Memory dump",
+            "hang": "Hang report",
+            "ips": "Crash report",
+            "log": "Log file",
+            "logarchive": "System log archive",
+            "logs": "Log file",
+            "panic": "Kernel panic report",
+            "spin": "Spin report",
+            "trace": "Trace file",
+            "tracev3": "System log archive"
+          }
+        }
+      ],
+      "summary": "Log, trace and crash output from applications and the system."
+    },
+    {
+      "icon": "doc.richtext",
+      "id": "documents",
+      "kind": "file",
+      "name": "Documents",
+      "subgroups": [
+        {
+          "id": "documents.word",
+          "name": "Word processing",
+          "types": {
+            "abw": "AbiWord document",
+            "doc": "Word document",
+            "docm": "Word macro document",
+            "docx": "Word document",
+            "dot": "Word template",
+            "dotm": "Word macro template",
+            "dotx": "Word template",
+            "fodt": "Flat OpenDocument text",
+            "hwp": "Hangul document",
+            "mht": "Web archive",
+            "mhtml": "Web archive",
+            "odt": "OpenDocument text",
+            "ott": "OpenDocument template",
+            "pages": "Pages document",
+            "rtf": "Rich text document",
+            "rtfd": "Rich text with attachments",
+            "sxw": "OpenOffice document",
+            "webarchive": "Web archive",
+            "wpd": "WordPerfect document"
+          }
+        },
+        {
+          "id": "documents.portable",
+          "name": "Portable documents",
+          "types": {
+            "chm": "Compiled help file",
+            "djv": "DjVu document",
+            "djvu": "DjVu document",
+            "dvi": "TeX device independent",
+            "eps": "Encapsulated PostScript",
+            "epsf": "Encapsulated PostScript",
+            "hlp": "Help file",
+            "oxps": "OpenXPS document",
+            "pdf": "PDF document",
+            "ps": "PostScript document",
+            "wri": "Write document",
+            "xps": "XPS document"
+          }
+        },
+        {
+          "id": "documents.typeset",
+          "name": "Typesetting",
+          "types": {
+            "aux": "LaTeX auxiliary file",
+            "bbl": "BibTeX output",
+            "bib": "BibTeX bibliography",
+            "bst": "BibTeX style",
+            "cls": "LaTeX class",
+            "latex": "LaTeX document",
+            "ltx": "LaTeX document",
+            "nroff": "nroff document",
+            "roff": "roff document",
+            "sil": "SILE document",
+            "sty": "LaTeX style",
+            "tex": "TeX document",
+            "toc": "Table of contents",
+            "typ": "Typst document"
+          }
+        },
+        {
+          "id": "documents.notes",
+          "name": "Notes and outlines",
+          "types": {
+            "enex": "Evernote export",
+            "note": "Note",
+            "one": "OneNote notebook",
+            "oo3": "OmniOutliner document",
+            "opml": "Outline document",
+            "scriv": "Scrivener project",
+            "tbx": "Tinderbox document"
+          }
+        }
+      ],
+      "summary": "Word processing, page layout, portable documents and typesetting."
+    },
+    {
+      "icon": "envelope",
+      "id": "mail",
+      "kind": "file",
+      "name": "Mail, calendars and contacts",
+      "subgroups": [
+        {
+          "id": "mail.messages",
+          "name": "Messages",
+          "types": {
+            "eml": "Email message",
+            "emltpl": "Email template",
+            "emlx": "Email message",
+            "mbox": "Mailbox archive",
+            "mime": "MIME message",
+            "msg": "Outlook message",
+            "oft": "Outlook template",
+            "olm": "Outlook archive",
+            "pst": "Outlook data file"
+          }
+        },
+        {
+          "id": "mail.calendar",
+          "name": "Calendars and contacts",
+          "types": {
+            "abbu": "Address book backup",
+            "abcdg": "Contact group",
+            "abcdp": "Contact",
+            "ical": "Calendar file",
+            "icbu": "Calendar backup",
+            "ics": "Calendar event",
+            "itt": "Calendar template",
+            "ldi": "Directory entry",
+            "vcard": "Contact card",
+            "vcf": "Contact card",
+            "vcs": "Calendar event"
+          }
+        }
+      ],
+      "summary": "Messages, invitations and address book entries — what moves when you change mail or calendar app."
+    },
+    {
+      "icon": "tablecells",
+      "id": "spreadsheets",
+      "kind": "file",
+      "name": "Spreadsheets",
+      "subgroups": [
+        {
+          "id": "spreadsheets.all",
+          "name": "Spreadsheets",
+          "types": {
+            "fods": "Flat OpenDocument spreadsheet",
+            "gnumeric": "Gnumeric spreadsheet",
+            "numbers": "Numbers spreadsheet",
+            "ods": "OpenDocument spreadsheet",
+            "ofx": "Financial exchange file",
+            "ots": "OpenDocument template",
+            "qbo": "Financial transactions",
+            "qif": "Quicken interchange file",
+            "sxc": "OpenOffice spreadsheet",
+            "xlam": "Excel add-in",
+            "xls": "Excel workbook",
+            "xlsb": "Excel binary workbook",
+            "xlsm": "Excel macro workbook",
+            "xlsx": "Excel workbook",
+            "xlt": "Excel template",
+            "xltx": "Excel template"
+          }
+        }
+      ],
+      "summary": "Workbooks and tabular documents."
+    },
+    {
+      "icon": "rectangle.on.rectangle",
+      "id": "presentations",
+      "kind": "file",
+      "name": "Presentations",
+      "subgroups": [
+        {
+          "id": "presentations.all",
+          "name": "Presentations",
+          "types": {
+            "fodp": "Flat OpenDocument presentation",
+            "key": "Keynote presentation",
+            "odp": "OpenDocument presentation",
+            "otp": "OpenDocument template",
+            "pot": "PowerPoint template",
+            "potm": "PowerPoint macro template",
+            "potx": "PowerPoint template",
+            "pps": "PowerPoint slideshow",
+            "ppsm": "PowerPoint macro slideshow",
+            "ppsx": "PowerPoint slideshow",
+            "ppt": "PowerPoint presentation",
+            "pptm": "PowerPoint macro presentation",
+            "pptx": "PowerPoint presentation",
+            "sxi": "OpenOffice presentation"
+          }
+        }
+      ],
+      "summary": "Slide decks and presentation documents."
+    },
+    {
+      "icon": "photo",
+      "id": "images",
+      "kind": "file",
+      "name": "Images",
+      "subgroups": [
+        {
+          "id": "images.common",
+          "name": "Everyday formats",
+          "types": {
+            "apng": "Animated PNG image",
+            "avif": "AVIF image",
+            "bmp": "Bitmap image",
+            "cur": "Cursor image",
+            "gif": "GIF image",
+            "heic": "HEIF image",
+            "heics": "HEIF image sequence",
+            "heif": "HEIF image",
+            "icns": "Apple icon image",
+            "ico": "Icon image",
+            "j2k": "JPEG 2000 image",
+            "jfif": "JPEG image",
+            "jp2": "JPEG 2000 image",
+            "jpe": "JPEG image",
+            "jpeg": "JPEG image",
+            "jpf": "JPEG 2000 image",
+            "jpg": "JPEG image",
+            "jxl": "JPEG XL image",
+            "pict": "PICT image",
+            "png": "PNG image",
+            "tif": "TIFF image",
+            "tiff": "TIFF image",
+            "webp": "WebP image"
+          }
+        },
+        {
+          "id": "images.raw",
+          "name": "Camera raw",
+          "types": {
+            "3fr": "Hasselblad raw",
+            "arw": "Sony raw",
+            "bay": "Casio raw image",
+            "cr2": "Canon raw",
+            "cr3": "Canon raw",
+            "crw": "Canon raw",
+            "dcr": "Kodak raw",
+            "dcs": "Kodak raw image",
+            "dng": "Digital negative",
+            "drf": "Kodak raw image",
+            "erf": "Epson raw",
+            "fff": "Hasselblad raw",
+            "gpr": "GoPro raw",
+            "iiq": "Phase One raw",
+            "k25": "Kodak raw image",
+            "kdc": "Kodak raw",
+            "mef": "Mamiya raw image",
+            "mos": "Leaf raw image",
+            "mrw": "Minolta raw",
+            "nef": "Nikon raw",
+            "nefx": "Nikon raw image",
+            "nrw": "Nikon raw",
+            "orf": "Olympus raw",
+            "pef": "Pentax raw",
+            "pxn": "Logitech raw image",
+            "raf": "Fujifilm raw",
+            "raw": "Camera raw",
+            "rw2": "Panasonic raw",
+            "rwl": "Leica raw",
+            "sr2": "Sony raw",
+            "srf": "Sony raw",
+            "srw": "Samsung raw image",
+            "x3f": "Sigma raw"
+          }
+        },
+        {
+          "id": "images.specialist",
+          "name": "Specialist and legacy",
+          "types": {
+            "astc": "ASTC texture",
+            "basis": "Basis texture",
+            "dcm": "DICOM image",
+            "dds": "DirectDraw surface",
+            "dicom": "DICOM image",
+            "exr": "OpenEXR image",
+            "fit": "FITS image",
+            "fits": "FITS image",
+            "hdp": "HD Photo image",
+            "hdr": "Radiance HDR image",
+            "jpegxr": "JPEG XR image",
+            "jxr": "JPEG XR image",
+            "ktx": "Khronos texture",
+            "ktx2": "Khronos texture",
+            "nii": "NIfTI image",
+            "pbm": "Portable bitmap",
+            "pct": "PICT image",
+            "pcx": "PCX image",
+            "pfm": "Portable float map",
+            "pgm": "Portable graymap",
+            "pnm": "Portable anymap",
+            "ppm": "Portable pixmap",
+            "rgb": "SGI image",
+            "sgi": "SGI image",
+            "tga": "Targa image",
+            "wbmp": "Wireless bitmap",
+            "xbm": "X bitmap",
+            "xpm": "X pixmap"
+          }
+        }
+      ],
+      "summary": "Photographs, screenshots and bitmap graphics of every era."
+    },
+    {
+      "icon": "paintbrush.pointed",
+      "id": "design",
+      "kind": "file",
+      "name": "Design files",
+      "subgroups": [
+        {
+          "id": "design.raster",
+          "name": "Image editing",
+          "types": {
+            "abr": "Photoshop brushes",
+            "aco": "Photoshop swatches",
+            "afphoto": "Affinity Photo document",
+            "clip": "Clip Studio document",
+            "cosession": "Capture One session",
+            "kra": "Krita document",
+            "lrcat": "Lightroom catalogue",
+            "procreate": "Procreate document",
+            "psb": "Photoshop large document",
+            "psd": "Photoshop document",
+            "pxd": "Pixelmator document",
+            "pxm": "Pixelmator document",
+            "xcf": "GIMP image"
+          }
+        },
+        {
+          "id": "design.vector",
+          "name": "Vector, layout and diagrams",
+          "types": {
+            "afdesign": "Affinity Designer document",
+            "afpub": "Affinity Publisher document",
+            "ai": "Illustrator document",
+            "drawio": "diagrams.net document",
+            "excalidraw": "Excalidraw drawing",
+            "fig": "Figma document",
+            "graffle": "OmniGraffle document",
+            "gv": "Graphviz diagram",
+            "idml": "InDesign markup",
+            "indd": "InDesign document",
+            "lottie": "Lottie animation",
+            "mmd": "Mermaid diagram",
+            "puml": "PlantUML diagram",
+            "rive": "Rive animation",
+            "sketch": "Sketch document",
+            "svg": "SVG vector image",
+            "svgz": "Compressed SVG",
+            "vsd": "Visio drawing",
+            "vsdx": "Visio drawing",
+            "xd": "Adobe XD document"
+          }
+        }
+      ],
+      "summary": "Editable documents from design, illustration and diagramming tools."
+    },
+    {
+      "icon": "cube",
+      "id": "models3d",
+      "kind": "file",
+      "name": "3D and CAD",
+      "subgroups": [
+        {
+          "id": "models3d.mesh",
+          "name": "Models and scenes",
+          "types": {
+            "3ds": "3D Studio model",
+            "3mf": "3D manufacturing format",
+            "abc": "Alembic scene",
+            "dae": "COLLADA model",
+            "fbx": "FBX 3D model",
+            "gcode": "3D printer instructions",
+            "glb": "glTF binary model",
+            "gltf": "glTF model",
+            "mtl": "Wavefront material",
+            "obj": "Wavefront 3D model",
+            "ply": "Polygon model",
+            "reality": "Reality Composer scene",
+            "scn": "SceneKit scene",
+            "stl": "Stereolithography model",
+            "usd": "USD scene",
+            "usda": "USD text scene",
+            "usdc": "USD binary scene",
+            "usdz": "USDZ scene",
+            "vox": "Voxel model",
+            "vrml": "VRML scene",
+            "x3d": "X3D scene"
+          }
+        },
+        {
+          "id": "models3d.apps",
+          "name": "Application documents",
+          "types": {
+            "blend": "Blender document",
+            "c4d": "Cinema 4D document",
+            "dwg": "AutoCAD drawing",
+            "dxf": "Drawing exchange file",
+            "f3d": "Fusion 360 document",
+            "hip": "Houdini project",
+            "ifc": "Building model",
+            "iges": "IGES CAD model",
+            "igs": "IGES CAD model",
+            "ma": "Maya scene",
+            "max": "3ds Max scene",
+            "mb": "Maya binary scene",
+            "rvt": "Revit project",
+            "skp": "SketchUp document",
+            "sldasm": "SolidWorks assembly",
+            "sldprt": "SolidWorks part",
+            "step": "STEP CAD model",
+            "stp": "STEP CAD model"
+          }
+        }
+      ],
+      "summary": "Meshes, scenes and computer-aided design documents."
+    },
+    {
+      "icon": "waveform",
+      "id": "audio",
+      "kind": "file",
+      "name": "Audio",
+      "subgroups": [
+        {
+          "id": "audio.common",
+          "name": "Everyday audio",
+          "types": {
+            "aac": "AAC audio",
+            "ac3": "Dolby Digital audio",
+            "adts": "AAC audio stream",
+            "aif": "AIFF audio",
+            "aifc": "Compressed AIFF audio",
+            "aiff": "AIFF audio",
+            "alac": "Apple Lossless audio",
+            "amr": "AMR audio",
+            "ape": "Monkey's Audio",
+            "au": "Sun audio",
+            "bwf": "Broadcast Wave audio",
+            "caf": "Core Audio file",
+            "dff": "DSD audio",
+            "dsf": "DSD audio",
+            "eac3": "Dolby Digital Plus audio",
+            "ec3": "Dolby Digital Plus audio",
+            "flac": "FLAC audio",
+            "latm": "AAC audio stream",
+            "loas": "AAC audio stream",
+            "m1a": "MPEG-1 audio",
+            "m2a": "MPEG-2 audio",
+            "m4a": "AAC audio",
+            "m4b": "Audiobook",
+            "m4p": "Protected AAC audio",
+            "m4r": "Ringtone",
+            "mka": "Matroska audio",
+            "mp1": "MPEG-1 Layer I audio",
+            "mp2": "MPEG-1 Layer II audio",
+            "mp3": "MP3 audio",
+            "mpa": "MPEG audio",
+            "mpga": "MPEG audio",
+            "oga": "Ogg audio",
+            "ogg": "Ogg audio",
+            "opus": "Opus audio",
+            "ra": "RealAudio",
+            "snd": "Sound file",
+            "tta": "True Audio",
+            "voc": "Creative voice file",
+            "wav": "WAV audio",
+            "wave": "WAV audio",
+            "wma": "Windows Media audio",
+            "wv": "WavPack audio"
+          }
+        },
+        {
+          "id": "audio.playlists",
+          "name": "Playlists",
+          "types": {
+            "cuesheet": "Cue sheet",
+            "m3u": "Playlist",
+            "m3u8": "Playlist",
+            "pls": "Playlist",
+            "wpl": "Windows playlist",
+            "xspf": "Playlist"
+          }
+        },
+        {
+          "id": "audio.projects",
+          "name": "Projects, scores and instruments",
+          "types": {
+            "alp": "Ableton Live pack",
+            "als": "Ableton Live set",
+            "aup": "Audacity project",
+            "aup3": "Audacity project",
+            "band": "GarageBand project",
+            "cpr": "Cubase project",
+            "flp": "FL Studio project",
+            "gtp": "Guitar Pro tab",
+            "it": "Impulse Tracker module",
+            "logicx": "Logic Pro project",
+            "ly": "LilyPond score",
+            "mid": "MIDI file",
+            "midi": "MIDI file",
+            "mod": "Tracker module",
+            "mscz": "MuseScore score",
+            "musicxml": "MusicXML score",
+            "mxl": "MusicXML score",
+            "nki": "Kontakt instrument",
+            "nkm": "Kontakt multi",
+            "ptx": "Pro Tools session",
+            "rpp": "Reaper project",
+            "s3m": "ScreamTracker module",
+            "sf2": "SoundFont",
+            "sf3": "SoundFont",
+            "sfz": "SFZ instrument",
+            "smf": "Standard MIDI file",
+            "song": "Studio One song",
+            "xm": "Extended module"
+          }
+        }
+      ],
+      "summary": "Music, recordings, playlists and audio projects."
+    },
+    {
+      "icon": "film",
+      "id": "video",
+      "kind": "file",
+      "name": "Video",
+      "subgroups": [
+        {
+          "id": "video.common",
+          "name": "Everyday video",
+          "types": {
+            "3g2": "3GPP2 video",
+            "3gp": "3GPP video",
+            "3gp2": "3GPP2 video",
+            "3gpp": "3GPP video",
+            "asf": "Advanced Systems Format",
+            "avi": "AVI video",
+            "divx": "DivX video",
+            "dv": "DV video",
+            "f4v": "Flash video",
+            "flv": "Flash video",
+            "ifo": "DVD information file",
+            "m1v": "MPEG-1 video",
+            "m2p": "MPEG-2 program stream",
+            "m2t": "MPEG-2 transport stream",
+            "m2ts": "Blu-ray video",
+            "m2v": "MPEG-2 video",
+            "m4v": "MPEG-4 video",
+            "mkv": "Matroska video",
+            "mov": "QuickTime movie",
+            "movpkg": "Apple video package",
+            "mp4": "MPEG-4 video",
+            "mpe": "MPEG video",
+            "mpeg": "MPEG video",
+            "mpg": "MPEG video",
+            "mpg4": "MPEG-4 video",
+            "mqv": "QuickTime video",
+            "ogv": "Ogg video",
+            "qt": "QuickTime movie",
+            "rm": "RealMedia video",
+            "rmvb": "RealMedia video",
+            "vob": "DVD video object",
+            "webm": "WebM video",
+            "wmv": "Windows Media video"
+          }
+        },
+        {
+          "id": "video.pro",
+          "name": "Broadcast and editing",
+          "types": {
+            "aaf": "Advanced authoring format",
+            "aep": "After Effects project",
+            "aepx": "After Effects project",
+            "ari": "ARRIRAW video",
+            "braw": "Blackmagic raw video",
+            "drp": "DaVinci Resolve project",
+            "edl": "Edit decision list",
+            "fcpbundle": "Final Cut Pro library",
+            "fcpxml": "Final Cut Pro XML",
+            "imovieproj": "iMovie project",
+            "moi": "Movie information file",
+            "mxf": "Material exchange format",
+            "otio": "OpenTimelineIO edit",
+            "prproj": "Premiere Pro project",
+            "r3d": "REDCODE raw video",
+            "veg": "Vegas project"
+          }
+        }
+      ],
+      "summary": "Films, clips, screen recordings and editing projects."
+    },
+    {
+      "icon": "captions.bubble",
+      "id": "subtitles",
+      "kind": "file",
+      "name": "Subtitles",
+      "subgroups": [
+        {
+          "id": "subtitles.all",
+          "name": "Subtitles",
+          "types": {
+            "ass": "Advanced SubStation subtitles",
+            "dfxp": "Distribution format exchange",
+            "idx": "Subtitle index",
+            "lrc": "Timed lyrics",
+            "sbv": "YouTube subtitles",
+            "scc": "Scenarist closed captions",
+            "smi": "SAMI captions",
+            "srt": "SubRip subtitles",
+            "ssa": "SubStation Alpha subtitles",
+            "sub": "Subtitle file",
+            "ttml": "Timed text markup",
+            "vtt": "WebVTT subtitles"
+          }
+        }
+      ],
+      "summary": "Caption and subtitle tracks."
+    },
+    {
+      "icon": "archivebox",
+      "id": "archives",
+      "kind": "file",
+      "name": "Archives",
+      "subgroups": [
+        {
+          "id": "archives.common",
+          "name": "Archives",
+          "types": {
+            "7z": "7-Zip archive",
+            "ace": "ACE archive",
+            "adz": "Amiga disk archive",
+            "alz": "ALZip archive",
+            "ar": "Unix archive",
+            "arc": "ARC archive",
+            "arj": "ARJ archive",
+            "cab": "Windows cabinet",
+            "cpio": "cpio archive",
+            "cpt": "Compact Pro archive",
+            "dms": "DMS disk archive",
+            "egg": "ALZip archive",
+            "gtar": "GNU tar archive",
+            "hqx": "BinHex archive",
+            "lbr": "LBR archive",
+            "lha": "LHA archive",
+            "lzh": "LZH archive",
+            "lzx": "LZX archive",
+            "pak": "PAK archive",
+            "pax": "PAX archive",
+            "pit": "PackIt archive",
+            "r00": "RAR archive part",
+            "rar": "RAR archive",
+            "shar": "Shell archive",
+            "sit": "StuffIt archive",
+            "sitx": "StuffIt X archive",
+            "tar": "Tar archive",
+            "taz": "Compressed tar archive",
+            "tbz": "Bzipped tar archive",
+            "tbz2": "Bzipped tar archive",
+            "tgz": "Gzipped tar archive",
+            "txz": "XZ tar archive",
+            "tzst": "Zstandard tar archive",
+            "zip": "Zip archive",
+            "zipx": "Extended zip archive",
+            "zoo": "Zoo archive"
+          }
+        },
+        {
+          "id": "archives.compressed",
+          "name": "Compressed files",
+          "types": {
+            "br": "Brotli file",
+            "bz": "Bzip file",
+            "bz2": "Bzip2 file",
+            "bzip2": "Bzip2 file",
+            "cpgz": "Compressed cpio archive",
+            "gz": "Gzip file",
+            "gzip": "Gzip file",
+            "lz": "Lzip file",
+            "lz4": "LZ4 file",
+            "lzma": "LZMA file",
+            "lzo": "LZO file",
+            "rz": "Rzip file",
+            "sz": "Snappy file",
+            "xz": "XZ file",
+            "z": "Compressed file",
+            "zpaq": "ZPAQ archive",
+            "zst": "Zstandard file"
+          }
+        },
+        {
+          "id": "archives.packages",
+          "name": "Software packages",
+          "types": {
+            "aab": "Android app bundle",
+            "apk": "Android package",
+            "appimage": "AppImage bundle",
+            "crx": "Chrome extension",
+            "deb": "Debian package",
+            "ear": "Enterprise archive",
+            "flatpak": "Flatpak bundle",
+            "gem": "Ruby gem",
+            "ipa": "iOS app package",
+            "jar": "Java archive",
+            "nupkg": "NuGet package",
+            "rpm": "RPM package",
+            "snap": "Snap package",
+            "vsix": "Visual Studio extension",
+            "war": "Web application archive",
+            "whl": "Python wheel",
+            "xpi": "Firefox add-on"
+          }
+        }
+      ],
+      "summary": "Compressed bundles and archive formats, including the modern ones nothing claims."
+    },
+    {
+      "icon": "opticaldiscdrive",
+      "id": "diskimages",
+      "kind": "file",
+      "name": "Disk images",
+      "subgroups": [
+        {
+          "id": "diskimages.all",
+          "name": "Disk images",
+          "types": {
+            "bin": "Binary disc image",
+            "cdr": "Disc image",
+            "dmg": "Disk image",
+            "hds": "Parallels disk",
+            "img": "Disk image",
+            "iso": "Disc image",
+            "mdf": "Media disc image",
+            "nrg": "Nero disc image",
+            "pvm": "Parallels virtual machine",
+            "qcow2": "QEMU disk image",
+            "sparsebundle": "Sparse bundle",
+            "sparseimage": "Sparse disk image",
+            "toast": "Toast disc image",
+            "utm": "UTM virtual machine",
+            "vbox": "VirtualBox machine",
+            "vdi": "VirtualBox disk image",
+            "vhd": "Virtual hard disk",
+            "vhdx": "Virtual hard disk",
+            "vmdk": "VMware disk",
+            "vmwarevm": "VMware virtual machine"
+          }
+        }
+      ],
+      "summary": "Mountable images, virtual machine disks and installer volumes."
+    },
+    {
+      "icon": "shippingbox",
+      "id": "executables",
+      "kind": "file",
+      "name": "Installers and programs",
+      "subgroups": [
+        {
+          "id": "executables.all",
+          "name": "Installers and binaries",
+          "types": {
+            "a": "Static library",
+            "appx": "Windows app package",
+            "bundle": "Loadable bundle",
+            "com": "DOS program",
+            "dll": "Windows library",
+            "dylib": "Dynamic library",
+            "elf": "Executable binary",
+            "exe": "Windows program",
+            "framework": "Framework",
+            "mpkg": "Multi-part installer package",
+            "msi": "Windows installer",
+            "msix": "Windows app package",
+            "o": "Object file",
+            "pkg": "Installer package",
+            "run": "Executable installer",
+            "so": "Shared library",
+            "xcframework": "Cross-platform framework"
+          }
+        }
+      ],
+      "summary": "Installer packages, binaries and libraries."
+    },
+    {
+      "icon": "textformat",
+      "id": "fonts",
+      "kind": "file",
+      "name": "Fonts",
+      "subgroups": [
+        {
+          "id": "fonts.all",
+          "name": "Fonts",
+          "types": {
+            "afm": "Adobe font metrics",
+            "bdf": "Bitmap distribution font",
+            "designspace": "Font designspace",
+            "dfont": "Data-fork font",
+            "eot": "Embedded OpenType font",
+            "fea": "OpenType feature file",
+            "fon": "Windows bitmap font",
+            "glyphs": "Glyphs document",
+            "otc": "OpenType collection",
+            "otf": "OpenType font",
+            "pcf": "Portable compiled font",
+            "pfa": "PostScript font",
+            "pfb": "PostScript font binary",
+            "psf": "Console font",
+            "sfd": "FontForge document",
+            "suit": "Font suitcase",
+            "ttc": "TrueType collection",
+            "ttf": "TrueType font",
+            "ufo": "Unified font object",
+            "vfb": "FontLab document",
+            "woff": "Web font",
+            "woff2": "Web font"
+          }
+        }
+      ],
+      "summary": "Typefaces, collections and font source documents."
+    },
+    {
+      "icon": "book",
+      "id": "ebooks",
+      "kind": "file",
+      "name": "Books and comics",
+      "subgroups": [
+        {
+          "id": "ebooks.all",
+          "name": "Books and comics",
+          "types": {
+            "aa": "Audible audiobook",
+            "aax": "Audible audiobook",
+            "acsm": "Adobe content server message",
+            "azw": "Kindle book",
+            "azw3": "Kindle book",
+            "azw4": "Kindle book",
+            "cb7": "Comic book archive",
+            "cbr": "Comic book archive",
+            "cbt": "Comic book archive",
+            "cbz": "Comic book archive",
+            "epub": "EPUB book",
+            "fb2": "FictionBook",
+            "ibooks": "iBooks Author book",
+            "kepub": "Kobo book",
+            "kfx": "Kindle book",
+            "lit": "Microsoft Reader book",
+            "mobi": "Mobipocket book",
+            "ncx": "Navigation control file",
+            "opf": "Open packaging format",
+            "pdb": "Palm book",
+            "prc": "Palm book"
+          }
+        }
+      ],
+      "summary": "Electronic books, comics and reading formats."
+    },
+    {
+      "icon": "cylinder.split.1x2",
+      "id": "databases",
+      "kind": "file",
+      "name": "Data and databases",
+      "subgroups": [
+        {
+          "id": "databases.stores",
+          "name": "Databases",
+          "types": {
+            "accdb": "Access database",
+            "db": "Database file",
+            "db3": "SQLite database",
+            "dbf": "dBase database",
+            "frm": "MySQL table definition",
+            "ldb": "LevelDB file",
+            "mdb": "Access database",
+            "myd": "MySQL data file",
+            "realm": "Realm database",
+            "sqlite": "SQLite database",
+            "sqlite3": "SQLite database"
+          }
+        },
+        {
+          "id": "databases.datasets",
+          "name": "Datasets and models",
+          "types": {
+            "arrow": "Arrow dataset",
+            "avro": "Avro dataset",
+            "cdf": "NetCDF dataset",
+            "ckpt": "Model checkpoint",
+            "dta": "Stata dataset",
+            "feather": "Feather dataset",
+            "ggml": "Model weights",
+            "gguf": "Model weights",
+            "h5": "HDF5 dataset",
+            "hdf": "HDF dataset",
+            "hdf5": "HDF5 dataset",
+            "ldif": "LDAP directory export",
+            "mlmodel": "Core ML model",
+            "mlpackage": "Core ML model",
+            "nc": "NetCDF dataset",
+            "npy": "NumPy array",
+            "npz": "NumPy archive",
+            "onnx": "Machine learning model",
+            "orc": "ORC dataset",
+            "parquet": "Parquet dataset",
+            "pickle": "Python pickle",
+            "pkl": "Python pickle",
+            "pt": "PyTorch model",
+            "pth": "PyTorch model",
+            "rdata": "R workspace",
+            "rds": "R dataset",
+            "safetensors": "Model weights",
+            "sav": "SPSS dataset",
+            "tflite": "TensorFlow Lite model"
+          }
+        },
+        {
+          "id": "databases.geo",
+          "name": "Geographic data",
+          "types": {
+            "geojson": "Geographic data",
+            "gpkg": "GeoPackage",
+            "gpx": "GPS track",
+            "kml": "Geographic data",
+            "kmz": "Geographic data",
+            "mbtiles": "Map tiles",
+            "osm": "OpenStreetMap data",
+            "shp": "Shapefile"
+          }
+        }
+      ],
+      "summary": "On-disk databases and scientific, geographic or machine-learning datasets."
+    },
+    {
+      "icon": "key",
+      "id": "security",
+      "kind": "file",
+      "name": "Certificates and keys",
+      "subgroups": [
+        {
+          "id": "security.all",
+          "name": "Certificates and keys",
+          "types": {
+            "1pif": "1Password export",
+            "asc": "PGP armoured file",
+            "asice": "Signed container",
+            "asics": "Signed container",
+            "bdoc": "Signed container",
+            "cdoc": "Encrypted container",
+            "cer": "Certificate",
+            "cert": "Certificate",
+            "crl": "Certificate revocation list",
+            "crt": "Certificate",
+            "csr": "Certificate request",
+            "ddoc": "Signed container",
+            "der": "DER certificate",
+            "edoc": "Signed container",
+            "gpg": "GPG encrypted file",
+            "jks": "Java keystore",
+            "kdbx": "KeePass database",
+            "keychain": "Keychain",
+            "keychain-db": "Keychain database",
+            "keystore": "Keystore",
+            "mobileconfig": "Configuration profile",
+            "mobileprovision": "Provisioning profile",
+            "opvault": "1Password vault",
+            "ovpn": "OpenVPN profile",
+            "p10": "Certificate request",
+            "p12": "PKCS#12 keystore",
+            "p7": "PKCS#7 message",
+            "p7b": "PKCS#7 certificate",
+            "p7c": "PKCS#7 certificate",
+            "p7m": "PKCS#7 encrypted message",
+            "p7r": "PKCS#7 response",
+            "p7s": "PKCS#7 signature",
+            "pem": "PEM certificate",
+            "pfx": "PKCS#12 keystore",
+            "pgp": "PGP encrypted file",
+            "pkcs12": "PKCS#12 keystore",
+            "ppk": "PuTTY private key",
+            "provisionprofile": "Provisioning profile",
+            "pub": "Public key",
+            "sig": "Signature file",
+            "tblk": "Tunnelblick profile"
+          }
+        }
+      ],
+      "summary": "Cryptographic material, certificates, profiles and signatures."
+    },
+    {
+      "icon": "globe",
+      "id": "weblinks",
+      "kind": "scheme",
+      "name": "Web links",
+      "subgroups": [
+        {
+          "id": "weblinks.all",
+          "name": "Web",
+          "types": {
+            "feed": "Feed links",
+            "ftp": "FTP links",
+            "ftps": "Secure FTP links",
+            "http": "Web links",
+            "https": "Secure web links",
+            "news": "Newsgroup links",
+            "nntp": "Newsgroup links",
+            "rss": "Feed links",
+            "webcal": "Calendar subscription links"
+          }
+        }
+      ],
+      "summary": "Which browser opens links handed over by other apps."
+    },
+    {
+      "icon": "envelope",
+      "id": "maillinks",
+      "kind": "scheme",
+      "name": "Mail",
+      "subgroups": [
+        {
+          "id": "maillinks.all",
+          "name": "Mail",
+          "types": {
+            "imap": "IMAP links",
+            "mailto": "Email links",
+            "message": "Message links",
+            "pop": "POP links",
+            "smtp": "SMTP links"
+          }
+        }
+      ],
+      "summary": "Which app opens email links."
+    },
+    {
+      "icon": "video",
+      "id": "meetinglinks",
+      "kind": "scheme",
+      "name": "Meetings and calls",
+      "subgroups": [
+        {
+          "id": "meetinglinks.all",
+          "name": "Meetings",
+          "types": {
+            "around": "Around links",
+            "bluejeans": "BlueJeans links",
+            "facetime": "FaceTime links",
+            "facetime-audio": "FaceTime audio links",
+            "gotomeeting": "GoToMeeting links",
+            "meet": "Google Meet links",
+            "msteams": "Microsoft Teams links",
+            "skype": "Skype links",
+            "tandem": "Tandem links",
+            "wbx": "Webex links",
+            "webex": "Webex links",
+            "zoommtg": "Zoom meeting links",
+            "zoomus": "Zoom links"
+          }
+        }
+      ],
+      "summary": "Which app opens video call invitations."
+    },
+    {
+      "icon": "bubble.left.and.bubble.right",
+      "id": "chatlinks",
+      "kind": "scheme",
+      "name": "Chat and messaging",
+      "subgroups": [
+        {
+          "id": "chatlinks.all",
+          "name": "Chat",
+          "types": {
+            "callto": "Call links",
+            "discord": "Discord links",
+            "imessage": "iMessage links",
+            "irc": "IRC links",
+            "ircs": "Secure IRC links",
+            "matrix": "Matrix links",
+            "sgnl": "Signal links",
+            "signal": "Signal links",
+            "slack": "Slack links",
+            "sms": "Text message links",
+            "tel": "Telephone links",
+            "tg": "Telegram links",
+            "whatsapp": "WhatsApp links",
+            "xmpp": "XMPP links"
+          }
+        }
+      ],
+      "summary": "Which app opens messaging and telephony links."
+    },
+    {
+      "icon": "terminal",
+      "id": "devlinks",
+      "kind": "scheme",
+      "name": "Developer links",
+      "subgroups": [
+        {
+          "id": "devlinks.all",
+          "name": "Developer tools",
+          "types": {
+            "cursor": "Cursor links",
+            "figma": "Figma links",
+            "fork": "Fork links",
+            "github-mac": "GitHub links",
+            "goland": "GoLand links",
+            "idea": "IntelliJ IDEA links",
+            "jetbrains": "JetBrains links",
+            "linear": "Linear links",
+            "mvim": "MacVim links",
+            "notion": "Notion links",
+            "nova": "Nova links",
+            "obsidian": "Obsidian links",
+            "postman": "Postman links",
+            "pycharm": "PyCharm links",
+            "raycast": "Raycast links",
+            "rider": "Rider links",
+            "sourcetree": "Sourcetree links",
+            "subl": "Sublime Text links",
+            "sublime": "Sublime Text links",
+            "textmate": "TextMate links",
+            "tower": "Tower links",
+            "vscode": "VS Code links",
+            "vscode-insiders": "VS Code Insiders links",
+            "webstorm": "WebStorm links",
+            "windsurf": "Windsurf links",
+            "x-github-client": "GitHub Desktop links",
+            "xcode": "Xcode links",
+            "zed": "Zed links"
+          }
+        }
+      ],
+      "summary": "Links that open editors and developer tools."
+    },
+    {
+      "icon": "network",
+      "id": "remotelinks",
+      "kind": "scheme",
+      "name": "Remote access",
+      "subgroups": [
+        {
+          "id": "remotelinks.all",
+          "name": "Remote access",
+          "types": {
+            "afp": "Apple file sharing links",
+            "cifs": "File sharing links",
+            "dav": "WebDAV links",
+            "davs": "Secure WebDAV links",
+            "ms-rd": "Remote Desktop links",
+            "nfs": "NFS links",
+            "rdp": "Remote Desktop links",
+            "sftp": "SFTP links",
+            "smb": "File sharing links",
+            "ssh": "SSH links",
+            "telnet": "Telnet links",
+            "vnc": "Screen sharing links",
+            "x-man-page": "Manual page links"
+          }
+        }
+      ],
+      "summary": "Links that open terminals, servers and remote sessions."
+    },
+    {
+      "icon": "play.rectangle",
+      "id": "medialinks",
+      "kind": "scheme",
+      "name": "Media links",
+      "subgroups": [
+        {
+          "id": "medialinks.all",
+          "name": "Media",
+          "types": {
+            "deezer": "Deezer links",
+            "iina": "IINA links",
+            "itms": "iTunes Store links",
+            "itmss": "iTunes Store links",
+            "itunes": "iTunes links",
+            "mms": "Streaming links",
+            "music": "Apple Music links",
+            "nflx": "Netflix links",
+            "pcast": "Podcast links",
+            "plex": "Plex links",
+            "podcast": "Podcast links",
+            "rtmp": "Streaming links",
+            "rtsp": "Streaming links",
+            "soundcloud": "SoundCloud links",
+            "spotify": "Spotify links",
+            "tidal": "Tidal links",
+            "videos": "Apple TV links",
+            "vlc": "VLC links",
+            "youtube": "YouTube links"
+          }
+        }
+      ],
+      "summary": "Links that open music, video and podcast apps."
+    },
+    {
+      "icon": "gearshape",
+      "id": "systemlinks",
+      "kind": "scheme",
+      "name": "System links",
+      "subgroups": [
+        {
+          "id": "systemlinks.all",
+          "name": "System",
+          "types": {
+            "addressbook": "Contacts links",
+            "applefeedback": "Feedback links",
+            "books": "Books links",
+            "calshow": "Calendar links",
+            "file": "Local file links",
+            "findmy": "Find My links",
+            "help": "Help links",
+            "maps": "Maps links",
+            "mobilenotes": "Notes links",
+            "notes": "Notes links",
+            "photos": "Photos links",
+            "photos-redirect": "Photos links",
+            "prefs": "Settings links",
+            "reminders": "Reminders links",
+            "shortcuts": "Shortcuts links",
+            "wildcard": "Wildcard links",
+            "x-apple-helpbasic": "Help links",
+            "x-apple-reminderkit": "Reminders links",
+            "x-apple-systempreferences": "Settings links"
+          }
+        }
+      ],
+      "summary": "Links handled by built-in apps — calendar, contacts, maps and settings."
+    }
+  ],
+  "version": 1
+}

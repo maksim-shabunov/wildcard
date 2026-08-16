@@ -1,0 +1,25 @@
+name: Feature request
+description: Suggest something Wildcard should do
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: The situation, rather than the solution — it often has a shorter answer.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you have in mind
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: >
+        A missing file type is not a feature request — it is one line in
+        `Sources/WildcardKit/Catalog/Resources/catalog.json`, and a pull request
+        for it is very welcome.
