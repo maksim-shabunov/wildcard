@@ -104,7 +104,11 @@ if pgrep -x Wildcard >/dev/null 2>&1; then
   done
 fi
 
-info "Installing to $DEST…"
+# Braces are load-bearing: bash 3.2, which is what /bin/bash still is on macOS
+# and therefore what `curl | bash` runs, reads the bytes of a multi-byte
+# character as part of a variable name. "$DEST…" looked up a variable called
+# DEST… and died under `set -u`.
+info "Installing to ${DEST}…"
 rm -rf "$DEST"
 ditto "$TMP/unpacked/$APP_NAME" "$DEST"
 
